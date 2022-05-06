@@ -1,6 +1,8 @@
 #! /usr/bin/env python2
 
-import os,sys,csv
+import os
+import sys
+import csv
 
 list1 = os.path.abspath(sys.argv[1])
 list2 = os.path.abspath(sys.argv[2])
@@ -21,19 +23,14 @@ intersection = set1 & set2
 set1_string = os.path.basename(list1)
 set2_string = os.path.basename(list2)
 
-print set1_string + ' - ' + set2_string + ' | count: ' + str(len(set1_to_2_diff))
+print(set1_string + ' - ' + set2_string + ' | count: ' + str(len(set1_to_2_diff)))
 for line in list(sorted(set1_to_2_diff)):
-    print line
+    print(line)
 
-#print ''
-
-print set2_string + ' - ' + set1_string + ' | count: ' + str(len(set2_to_1_diff))
+print(set2_string + ' - ' + set1_string + ' | count: ' + str(len(set2_to_1_diff)))
 for line in list(sorted(set2_to_1_diff)):
-    print line
+    print(line)
 
-#print ''
-
-print set1_string + ' (intersect) ' + set2_string + ' | count: ' + str(len(intersection))
+print(set1_string + ' & ' + set2_string + ' | count: ' + str(len(intersection)))
 for line in list(sorted(intersection)):
-    print line
-
+    print(line)

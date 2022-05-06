@@ -1,6 +1,8 @@
 #! /usr/bin/env python2
 
-import os,sys,csv
+import os
+import sys
+import csv
 
 list1 = os.path.abspath(sys.argv[1])
 list2 = os.path.abspath(sys.argv[2])
@@ -39,30 +41,30 @@ set1_onlys     = '%s - %s - %s' % (set1s,set2s,set3s)
 set2_onlys     = '%s - %s - %s' % (set2s,set1s,set3s)
 set3_onlys     = '%s - %s - %s' % (set3s,set1s,set2s)
 
-print set1_onlys + ' | count: ' + str(len(set1_only))
+print(set1_onlys + ' | count: ' + str(len(set1_only)))
 for line in list(sorted(set1_only)):
-    print line
+    print(line)
 
-print set2_onlys + ' | count: ' + str(len(set2_only))
+print(set2_onlys + ' | count: ' + str(len(set2_only)))
 for line in list(sorted(set2_only)):
-    print line
+    print(line)
 
-print set3_onlys + ' | count: ' + str(len(set3_only))
+print(set3_onlys + ' | count: ' + str(len(set3_only)))
 for line in list(sorted(set3_only)):
-    print line
+    print(line)
 
-print intersect_1_2s + ' | count: ' + str(len(intersect_1_2))
+print(intersect_1_2s + ' | count: ' + str(len(intersect_1_2)))
 for line in list(sorted(intersect_1_2)):
-    print line
+    print(line)
 
-print intersect_1_3s + ' | count: ' + str(len(intersect_1_3))
+print(intersect_1_3s + ' | count: ' + str(len(intersect_1_3)))
 for line in list(sorted(intersect_1_3)):
-    print line
+    print(line)
 
-print intersect_2_3s + ' | count: ' + str(len(intersect_2_3))
+print(intersect_2_3s + ' | count: ' + str(len(intersect_2_3)))
 for line in list(sorted(intersect_2_3)):
-    print line
+    print(line)
 
-print intersect_alls + ' | count: ' + str(len(intersect_all))
+print(intersect_alls + ' | count: ' + str(len(intersect_all)))
 for line in list(sorted(intersect_all)):
-    print line
+    print(line)
