@@ -7,10 +7,10 @@ import csv
 list1 = os.path.abspath(sys.argv[1])
 list2 = os.path.abspath(sys.argv[2])
 
-with open(list1,'rb') as csvfile:
+with open(list1,'r') as csvfile:
     list1contents = [line.rstrip('\n') for line in csvfile.readlines()]
 
-with open(list2,'rb') as csvfile:
+with open(list2,'r') as csvfile:
     list2contents = [line.rstrip('\n') for line in csvfile.readlines()]
 
 set1 = set(list1contents)
